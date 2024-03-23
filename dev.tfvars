@@ -1,8 +1,0 @@
-resource_group_name              = "dev-resource-group"
-location                         = "East US"
-vm_name                          = "dev-vm"
-vm_size                          = "Standard_DS1_v2"
-key_vault_name                   = "dev-key-vault"
-storage_account_name             = "devstorageaccount"
-storage_account_tier             = "Standard"
-storage_account_replication_type = "LRS"
