@@ -1,8 +1,0 @@
-resource_group_name              = "prod-resource-group"
-location                         = "Central US"
-vm_name                          = "prod-vm"
-vm_size                          = "Standard_DS3_v2"
-key_vault_name                   = "prod-key-vault"
-storage_account_name             = "prodstorageaccount"
-storage_account_tier             = "Premium"
-storage_account_replication_type = "ZRS"
