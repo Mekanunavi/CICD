@@ -1,8 +1,10 @@
 trigger:
   branches:
     include:
-      - main  # Or whatever branch you want to trigger the pipeline
-
+      - main
+  paths:
+    include:
+      - dev/**
 stages:
   - stage: Dev
     jobs:
@@ -29,7 +31,14 @@ stages:
           CLIENT_SECRET: $(CLIENT_SECRET)
           SUBSCRIPTION_ID: $(SUBSCRIPTION_ID)
           TENANT_ID: $(TENANT_ID)
-
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - qa/**
+stages:
   - stage: QA
     jobs:
       - job: Deploy_to_QA
@@ -55,7 +64,14 @@ stages:
           CLIENT_SECRET: $(CLIENT_SECRET)
           SUBSCRIPTION_ID: $(SUBSCRIPTION_ID)
           TENANT_ID: $(TENANT_ID)
-
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - PreProd/**
+stages:
   - stage: PreProd
     jobs:
       - job: Deploy_to_PreProd
@@ -81,7 +97,14 @@ stages:
           CLIENT_SECRET: $(CLIENT_SECRET)
           SUBSCRIPTION_ID: $(SUBSCRIPTION_ID)
           TENANT_ID: $(TENANT_ID)
-
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - Prod/**
+stages:
   - stage: Prod
     jobs:
       - job: Deploy_to_Prod
