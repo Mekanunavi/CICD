@@ -1,8 +1,0 @@
-resource_group_name              = "preprod-resource-group"
-location                         = "North Europe"
-vm_name                          = "preprod-vm"
-vm_size                          = "Standard_DS2_v2"
-key_vault_name                   = "preprod-key-vault"
-storage_account_name             = "preprodstorageaccount"
-storage_account_tier             = "Standard"
-storage_account_replication_type = "GRS"
