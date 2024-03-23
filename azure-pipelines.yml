@@ -13,7 +13,7 @@ stages:
         steps:
           - script: |
               # Add steps to authenticate with Azure (e.g., using Azure CLI)
-              az login --service-principal -u $(ARM_CLIENT_ID) -p $(ARM_CLIENT_SECRET) --tenant $(ARM_TENANT_ID)
+              az login --service-principal -u $(CLIENT_ID) -p $(CLIENT_SECRET) --tenant $(TENANT_ID)
               # Install Terraform
               curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
               sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
@@ -39,7 +39,7 @@ stages:
         steps:
           - script: |
               # Add steps to authenticate with Azure (e.g., using Azure CLI)
-              az login --service-principal -u $(ARM_CLIENT_ID) -p $(ARM_CLIENT_SECRET) --tenant $(ARM_TENANT_ID)
+              az login --service-principal -u $(CLIENT_ID) -p $(CLIENT_SECRET) --tenant $(TENANT_ID)
               # Install Terraform
               curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
               sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
@@ -65,7 +65,7 @@ stages:
         steps:
           - script: |
               # Add steps to authenticate with Azure (e.g., using Azure CLI)
-              az login --service-principal -u $(ARM_CLIENT_ID) -p $(ARM_CLIENT_SECRET) --tenant $(ARM_TENANT_ID)
+              az login --service-principal -u $(CLIENT_ID) -p $(CLIENT_SECRET) --tenant $(TENANT_ID)
               # Install Terraform
               curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
               sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
@@ -91,7 +91,7 @@ stages:
         steps:
           - script: |
               # Add steps to authenticate with Azure (e.g., using Azure CLI)
-              az login --service-principal -u $(ARM_CLIENT_ID) -p $(ARM_CLIENT_SECRET) --tenant $(ARM_TENANT_ID)
+              az login --service-principal -u $(CLIENT_ID) -p $(CLIENT_SECRET) --tenant $(TENANT_ID)
               # Install Terraform
               curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
               sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
